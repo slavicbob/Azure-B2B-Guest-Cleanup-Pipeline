@@ -1,0 +1,23 @@
+graph TD
+   A[CSV uploaded to Blob Storage] --> B[Blob trigger run.ps1]
+   B --> C[Write blob to temp input.csv]
+   C --> D[Call guest-delete.ps1]
+
+   D --> E[Connect to Microsoft Graph with certificate]
+   D --> F[Read CSV rows: UPN and RUNID]
+   E --> G[Evaluate each guest account]
+   F --> G
+
+   G --> H{State and inactivity rules}
+   H -->|Match cleanup criteria| I[Delete guest account]
+   H -->|No match| J[Keep account]
+
+   I --> K[Create result row]
+   J --> K
+   K --> L[Export PendingInvite-Results.csv]
+
+   L --> M[Upload result to output-logs]
+   L --> N[Archive input blob]
+
+   O[Managed Identity or Az login] --> M
+   O --> N
