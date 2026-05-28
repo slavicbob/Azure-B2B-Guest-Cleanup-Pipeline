@@ -114,3 +114,6 @@ In guest-delete.ps1:
 - profile.ps1 attempts Managed Identity Az login on cold start when MSI secret exists.
 - Current bootstrap code calls Read-EmailsFromCsv with a Sheet parameter, while the function signature is CSV-only. This mismatch should be corrected if execution errors occur.
 
+## Disclaimer
+
+This project is a generalized and sanitized portfolio implementation inspired by enterprise automation scenarios. No proprietary company information, credentials, production configurations, or internal business logic are included.
