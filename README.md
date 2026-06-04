@@ -89,10 +89,10 @@ Two auth paths are used:
 
 ## Dependencies
 Defined in requirements.psd1:
-- Az.Storage 5.x.x
-- Az.Accounts 2.x.x
-- Microsoft.Graph.Authentication 2.35.1
-- Microsoft.Graph.Users 2.35.1
+- Az.Storage 5.3.0
+- Az.Accounts 2.12.0
+- Microsoft.Graph.Authentication 2.27.1
+- Microsoft.Graph.Users 2.27.1
 
 ## Configuration placeholders to update before production use
 In Function_logic/guest-delete.ps1, replace placeholders:
