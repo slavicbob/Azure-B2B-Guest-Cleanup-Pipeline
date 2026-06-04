@@ -81,6 +81,11 @@ Two auth paths are used:
 - Storage operations for upload/archive:
   - Managed Identity when running in Azure.
   - Subscription-based Az login fallback when running locally.
+## API permissions required
+- AuditLog.Read.All
+- Directory.Read.All
+- User.invite.all (For inviting guest user into tenant, only required in testing phase)
+- User.ReadWrite.All
 
 ## Dependencies
 Defined in requirements.psd1:
